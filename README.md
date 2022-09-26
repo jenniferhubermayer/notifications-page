@@ -25,7 +25,11 @@ Users should be able to:
 
 ### Screenshots
 
+#### Mobile views
+
 ![](./screenshot/Screenshot_mobile.jpg)
+
+#### Desktop view
 
 ![](./screenshot/Screenshot_desktop.png)
 
