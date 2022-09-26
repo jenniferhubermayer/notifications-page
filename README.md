@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/jenniferhubermayer/notifications-page](https://github.com/jenniferhubermayer/notifications-page)
-- Live Site URL: [https://jenniferhubermayer.github.io/notifications-page/](https://jenniferhubermayer.github.io/notifications-page/)
+- Live Site URL: [https://6331bd82c2040b0488244172--lucky-begonia-a2f428.netlify.app/](https://6331bd82c2040b0488244172--lucky-begonia-a2f428.netlify.app/)
 
 ## My process
 
