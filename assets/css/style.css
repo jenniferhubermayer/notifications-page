@@ -1,0 +1,234 @@
+/* ---------- FONTS ---------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+
+/* ---------- COLORS ---------- */
+
+:root {
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  --White: hsl(0, 0%, 100%);
+  --Verylightgrayishblue: #f7fafd;
+  --Lightgrayishblue1: #e5effa;
+  --Lightgrayishblue2: #dde7ee;
+  --Grayishblue: #939dae;
+  --Darkgrayishblue: #5e6778;
+  --Verydarkblue: #1c202b;
+}
+
+/* ---------- GENERAL STYLES ---------- */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  text-align: left;
+}
+
+main {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--White);
+}
+
+body {
+  margin: 20px;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--Darkgrayishblue);
+}
+
+a {
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+/* ---------- HEADER SECTION WITH COUNTER AND LINK TO MARK ALL AS READ ---------- */
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.notifications-header .mark-all-as-read-link {
+  color: var(--Grayishblue);
+}
+
+.notifications-header .mark-all-as-read-link:hover {
+  color: var(--Blue);
+}
+
+.notifications-header h2,
+.notifications-header h2 span {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.notifications-header h2 span {
+  margin-left: 5px;
+}
+
+/* COUNTER FOR UNREAD MESSAGES */
+
+.count-unread-messages {
+  background-color: var(--Blue);
+  color: var(--White);
+  padding: 0 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+/* ---------- NOTIFICATIONS ---------- */
+
+.notifications-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+}
+
+/* GENERAL STYLES FOR ALL NOTIFICATIONS */
+
+button .left-section .content-wrapper {
+  text-align: left;
+}
+
+/* Left Section is where the avatar and writen notifications where placed */
+
+button .left-section {
+  display: flex;
+  gap: 15px;
+}
+
+/* AVATAR */
+
+button .left-section img {
+  height: 2.5rem;
+}
+
+/* USER NAME */
+
+button .left-section .notification-headline .user-name {
+  font-weight: 800;
+  color: var(--Verydarkblue);
+  margin-right: 0.5rem;
+  display: inline;
+}
+
+button .left-section .notification-headline .user-name:hover {
+  color: var(--Blue);
+}
+
+/* REACTION TEXT */
+
+button .left-section .notification-headline .reaction-text {
+  margin-right: 0.5rem;
+  display: inline;
+}
+
+/* REFERENCE TEXT (A POST, PICTURE OR GROUP IT REFERES TO) */
+
+button .left-section .notification-headline .reference-text {
+  display: inline;
+  font-weight: 500;
+  color: var(--Darkgrayishblue);
+  margin-right: 0.5rem;
+}
+
+button .left-section .notification-headline .reference-text:hover {
+  color: var(--Blue);
+}
+
+/* TIMING */
+
+p.timing-text {
+  text-align: left;
+  color: var(--Grayishblue);
+  margin-top: 0.25rem;
+}
+
+/* POSTS WITH PRIVATE MESSAGE */
+
+button .left-section .private-message {
+  border: 1px solid var(--Lightgrayishblue1);
+  margin-top: 0.75rem;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+button .left-section .private-message:hover {
+  background-color: var(--Lightgrayishblue1);
+}
+
+/* POSTS WITH PICTURE */
+
+.reference-picture {
+  height: 2.5rem;
+  margin-left: 1rem;
+}
+
+/* ---------- UNREAD MESSAGES ---------- */
+
+button {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--Verylightgrayishblue);
+}
+
+/* RED CIRCLE FOR EACH UNREAD MESSAGE */
+
+button .notification-headline::after {
+  display: inline-block;
+  content: " ";
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background-color: var(--Red);
+}
+
+/* ---------- READ MESSAGES ---------- */
+
+button.toggle-status-read {
+  background-color: var(--White);
+}
+
+button.toggle-status-read .notification-headline::after {
+  content: none;
+}
+
+/* ---------- FRONTEND MENOTOR FOOTER ---------- */
+
+.attribution {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 576px) {
+  body {
+    background-color: var(--Verylightgrayishblue);
+  }
+  main {
+    border-radius: 20px;
+    padding: 30px 20px;
+  }
+}
